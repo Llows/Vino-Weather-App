@@ -25,6 +25,7 @@ h2 {
   display: inline-block;
   border-radius: 10px;
   border: cadetblue;
+  margin: auto;
 }
 .navbar {
   flex-wrap: auto;
@@ -33,6 +34,8 @@ h2 {
   border-radius: 10px;
 }
 #current-location-button {
+  display: block;
+  text-align: auto;
   border-radius: 10px;
   border: cadetblue;
 }
