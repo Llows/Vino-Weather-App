@@ -19,18 +19,16 @@ h2 {
 }
 #search-form {
   width: 60%;
-  text-align: right;
+  box-sizing: border-box;
 }
 #searchbutton {
   display: inline-block;
   border-radius: 10px;
   border: cadetblue;
   margin: auto;
+  box-sizing: border-box;
 }
 .navbar {
-  flex-wrap: auto;
-  width: fit-content;
-
   border-radius: 10px;
 }
 #current-location-button {
@@ -44,7 +42,7 @@ h2 {
   align: margin-top;
 }
 .current-weather {
-  background-color: #f8f9fa;
+  padding-top: 10px;
   color: #304352;
   border-radius: 10px;
   padding: 15px;

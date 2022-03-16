@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vino 🍇 Weather</title>
     <link
@@ -16,10 +16,18 @@
   </head>
   <body>
     <div class="container">
-      <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid " id="search-form">
+      <nav class="col-4 navbar navbar-light bg-light">
+        <div class="container-fluid" id="search-form">
           <h6>city</h6>
-          <p> <a href="https://github.com/Llows/Vino-Weather-App">Open source</a> coded by Lucy Hallows</p>
+
+          <p>
+            <a class="col-6" href="https://github.com/Llows/Vino-Weather-App"
+              >Open source</a
+            >
+            coded by Lucy Hallows
+          </p>
+          <span class="class=" col-6
+            >x
             <form id="search-form">
               <input
                 type="text"
@@ -28,32 +36,37 @@
                 autofocus="on"
                 id="search-text-input"
               />
-              <input type="submit" value="search"
-              id ="searchbutton" />
+              <input type="submit" value="search" id="searchbutton" />
             </form>
+          </span>
 
-          <button id="current-location-button">
-            Current Location
-          </button>
+          <button id="current-location-button">Current Location</button>
+        </div>
       </nav>
 
-      <h2>
-        <div class="current-city"> </div>
-          <div id="current-temp"> 
-             </div>
-      </h2>
-
       <div class="row current-weather">
-        <div class="col-9 current-weathertemp">
-          <strong>High: </strong> <span class="CurrentHigh"> 6</span> <br />
-          <span class="currentLow"> <strong>Low:</strong> -2</span>
+        <h2>
+          <div class="current-city">New York</div>
+          <div id="current-temp">17 °C | °F</div>
+        </h2>
+        <div class="col-4 current-weathertemp">
+          <ul>
+            <li>
+              <span class="CurrentHigh"> <strong> High: </strong> 6</span>
+              <br />
+            </li>
+
+            <li>
+              <span class="currentLow"> <strong>Low:</strong> -2</span>
+            </li>
+          </ul>
         </div>
         <div class="col-4 CurrentWeather-Icon">
           <br />
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="80"
-            height="80"
+            width="75"
+            height="75"
             fill="currentColor"
             class="bi bi-cloud"
             viewBox="0 0 16 16"
@@ -65,12 +78,15 @@
         </div>
         <div class="col-10 CurrentWeather-Detail">
           <span class="CurrentDate">
-            <strong>Sunday Feb 6 2022</strong>
-            <br />
-            Day: A mix of Sun and cloud <br />
-            Night: Clear Skies <br />
-            Wind: 20km SE <br />
-            UV Index: Low<br />
+            <ul>
+              <li>
+                <strong>Sunday Feb 6 2022</strong>
+              </li>
+              <li>Day: A mix of Sun and cloud</li>
+              <li>Night: Clear Skies</li>
+              <li>Wind: 20km SE</li>
+              <li>UV Index: Low</li>
+            </ul>
           </span>
         </div>
       </div>
