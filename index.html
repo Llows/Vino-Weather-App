@@ -16,18 +16,18 @@
   </head>
   <body>
     <div class="container">
-      <nav class="col-4 navbar navbar-light bg-light">
-        <div class="container-fluid" id="search-form">
+      <p>
+        <a class="col-4" href="https://github.com/Llows/Vino-Weather-App"
+          >Open source</a
+        >
+        coded by Lucy Hallows
+      </p>
+
+      <nav class="row navbar bg-light">
+        <div class="col-6 container-fluid" id="search-form">
           <h6>city</h6>
 
-          <p>
-            <a class="col-6" href="https://github.com/Llows/Vino-Weather-App"
-              >Open source</a
-            >
-            coded by Lucy Hallows
-          </p>
-          <span class="class=" col-6
-            >x
+          <div class="col-6">
             <form id="search-form">
               <input
                 type="text"
@@ -38,11 +38,17 @@
               />
               <input type="submit" value="search" id="searchbutton" />
             </form>
-          </span>
+          </div>
 
-          <button id="current-location-button">Current Location</button>
+          <div>
+            <button class="col-6" id="current-location-button">
+              Current Location
+            </button>
+          </div>
         </div>
       </nav>
+
+      //
 
       <div class="row current-weather">
         <h2>
