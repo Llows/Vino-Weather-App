@@ -33,8 +33,6 @@ let month = months[now.getMonth()];
 
 h6.innerHTML = `${day} ${month} ${date} ${hours}:${minutes} ${year}`;
 
-// result of city = temperature
-
 function showPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
@@ -75,5 +73,3 @@ function showTemperature(response) {
   let currentCity = document.querySelector(".current-city");
   currentCity.innerHTML = city;
 }
-
-alert("hello");
