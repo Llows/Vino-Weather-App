@@ -74,5 +74,6 @@ function showTemperature(response) {
   temperatureElement.innerHTML = `${temperature}°C`;
   let currentCity = document.querySelector(".current-city");
   currentCity.innerHTML = city;
-  currentCity.innterHTML = "Vancouver";
 }
+
+alert("hello");
