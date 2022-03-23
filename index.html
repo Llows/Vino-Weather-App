@@ -44,24 +44,12 @@
           </div>
         </div>
       </nav>
-      <div class="row current-weather">
-        <h2>
-          <div class="current-city">New York</div>
-          <div id="current-temp">17 °C | °F</div>
-        </h2>
-        <div class="col-4 current-weathertemp">
-          <ul>
-            <li>
-              <span class="CurrentHigh"> <strong> High: </strong> 6</span>
-              <br />
-            </li>
+      
+        <h2 id="current-city"></h2>
+        <h2 id="current-temp"></h2>
+        <h2>°C  | F°</h2>
 
-            <li>
-              <span class="currentLow"> <strong>Low:</strong> -2</span>
-            </li>
-          </ul>
-        </div>
-        <div class="col-4 CurrentWeather-Icon">
+        <div class="col-12 CurrentWeather-Icon">
           <br />
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -94,8 +82,10 @@
       <h2>5 Day Outlook</h2>
 
       <div class="row align-items-end outlook">
-        <div class="col">
-          <svg
+        <div class="col-2">
+          
+          <ul>
+            <li><svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
             height="50"
@@ -106,14 +96,18 @@
             <path
               d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
             />
-          </svg>
-          <br />
-          Monday <br />7th Feb <br />
-          High: 7 <br />
-          Low : -1
-        </div>
-        <div class="col">
-          <svg
+          </svg></li>
+            <li>Monday</li>
+            <li>7th Feb </li>
+            <li>High: 7</li>
+            <li>Low : -1
+            </li>
+          </ul>
+          </div>
+               <div class="col-2">
+          
+          <ul>
+            <li><svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
             height="50"
@@ -124,15 +118,18 @@
             <path
               d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
             />
-          </svg>
-          <br />
-          Tuesday <br />
-          8th Feb <br />
-          High: 3 <br />
-          Low : -4
-        </div>
-        <div class="col">
-          <svg
+          </svg></li>
+            <li>Tuesday</li>
+            <li>8th Feb </li>
+            <li>High: 7</li>
+            <li>Low : -1
+            </li>
+          </ul>
+          </div>
+               <div class="col-2">
+          
+          <ul>
+            <li><svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
             height="50"
@@ -143,16 +140,18 @@
             <path
               d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
             />
-          </svg>
-          <br />
-          Wednesday<br />
-          9th Feb <br />
-          High: 5 <br />
-          Low : -6
-        </div>
-
-        <div class="col">
-          <svg
+          </svg></li>
+            <li>Wednesday</li>
+            <li>9thth Feb </li>
+            <li>High: 7</li>
+            <li>Low : -1
+            </li>
+          </ul>
+          </div>
+               <div class="col-2">
+          
+          <ul>
+            <li><svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
             height="50"
@@ -163,16 +162,18 @@
             <path
               d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
             />
-          </svg>
-          <br />
-          Thursday<br />
-          10th Feb <br />
-          High: 2 <br />
-          Low : -1
-        </div>
-
-        <div class="col">
-          <svg
+          </svg></li>
+            <li>Thursday</li>
+            <li>10th Feb </li>
+            <li>High: 7</li>
+            <li>Low : -1
+            </li>
+          </ul>
+          </div>
+               <div class="col-2">
+          
+          <ul>
+            <li><svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
             height="50"
@@ -183,15 +184,15 @@
             <path
               d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
             />
-          </svg>
-          <br />
-          Friday <br />
-          11th Feb <br />
-          High: 6 <br />
-          Low : 0
-        </div>
-      </div>
-    </div>
+          </svg></li>
+            <li>Friday</li>
+            <li>11th Feb </li>
+            <li>High: 7</li>
+            <li>Low : -1
+            </li>
+          </ul>
+          </div>
+        
     <script type="text/javascript" src="src/index.js"></script>
   </body>
 </html>
