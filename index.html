@@ -25,7 +25,7 @@
 
       <nav class="row navbar bg-light">
         <div class="col-12 container-fluid" id="search-form">
-          <h6>city</h6>
+          <h6 id="current-day"></h6>
           <button class="col-3" id="current-location-button">
             My Location
           </button>
@@ -68,12 +68,12 @@
         <div class="col-10 CurrentWeather-Detail">
           <span class="CurrentDate">
             <ul>
-              <li>
-                <strong>Sunday Feb 6 2022</strong>
+              <li id="current-day">
+                <strong>22nd March</strong>
               </li>
               <li id="description"></li>
-              <li>Humidity:<span id ="humidity"></li>
-              <li>Wind: 20km SE</li>
+              <li>Humidity: <span id ="humidity"></span> % </li>
+              <li>Wind: <span id ="wind"> Km</span> <span id="direction"></span></li>
               <li>UV Index: Low</li>
             </ul>
           </span>

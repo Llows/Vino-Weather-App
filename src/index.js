@@ -66,6 +66,7 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
 function showTemperature(response) {
+  console.log(response);
   let temperatureElement = document.querySelector("#current-temp");
   let temperature = Math.round(response.data.main.temp);
   let descriptionElement = document.querySelector("#description");
@@ -73,4 +74,8 @@ function showTemperature(response) {
   let currentCity = document.querySelector("#current-city");
   currentCity.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
