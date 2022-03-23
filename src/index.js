@@ -66,7 +66,6 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
 function showTemperature(response) {
-  console.log(response);
   let temperatureElement = document.querySelector("#current-temp");
   let temperature = Math.round(response.data.main.temp);
   let descriptionElement = document.querySelector("#description");
