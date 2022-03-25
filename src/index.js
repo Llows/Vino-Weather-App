@@ -33,15 +33,11 @@ let month = months[now.getMonth()];
 
 h6.innerHTML = `${day} ${month} ${date} ${hours}:${minutes} ${year}`;
 
-let apiKey = "a19d0a7907ecf33ebe6bf26439eeef45";
-let city = "Sydney";
-let apiUrl =
-  "https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}";
-
 const defaultCity = async (event) => {
   let city = "Sydney";
+  let apiKey = "a19d0a7907ecf33ebe6bf26439eeef45";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-  await axios.get(url).then(currentWeather);
+  await axios.get(url).then(showTemperature);
 };
 
 defaultCity();
@@ -82,19 +78,12 @@ function showTemperature(response) {
   let temperatureElement = document.querySelector("#current-temp");
   let temperature = Math.round(response.data.main.temp);
   let descriptionElement = document.querySelector("#description");
-  let currentCity = document.querySelector("#current-city");
-  let humidityElement = document.querySelector("#humidity");
-
-  let windElement = document.querySelector("#wind");
-
-  let iconElement = document.querySelector("#icon");
-
   temperatureElement.innerHTML = `${temperature}`;
+  let currentCity = document.querySelector("#current-city");
   currentCity.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
+  let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
+  let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  iconElement.setAttribute(
-    `src, http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
 }
