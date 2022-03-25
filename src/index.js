@@ -33,6 +33,14 @@ let month = months[now.getMonth()];
 
 h6.innerHTML = `${day} ${month} ${date} ${hours}:${minutes} ${year}`;
 
+const defaultCity = async (event) => {
+  let city = "Sydney";
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${key}`;
+  await axios.get(url).then(currentWeather);
+};
+
+defaultCity();
+
 function showPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
