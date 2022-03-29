@@ -1,0 +1,14 @@
+.container {
+  font-family: "Courier New", Courier, monospace;
+  max-width: 1200px;
+  box-sizing: none;
+}
+
+#current-location-button {
+  border-radius: 3px;
+  float: right;
+}
+
+#current-day {
+  margin: right 0px;
+}
