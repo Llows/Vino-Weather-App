@@ -17,33 +17,45 @@
   <body>
     <div class="container">
       <p>
-        <a class="col-4" href="https://github.com/Llows/Vino-Weather-App"
+        <a  href="https://github.com/Llows/Vino-Weather-App"
           >Open source</a
         >
         coded by Lucy Hallows
       </p>
-
-      <nav class="row navbar bg-light">
-        <div class="col-12 container-fluid" id="search-form">
-          <h6 id="current-day"></h6>
-          <button class="col-3" id="current-location-button">
-            My Location
-          </button>
-
-          <div class="col-5">
-            <form id="search-form">
+        
+            <form id="search-form"
+            class ="mb-3">
+              <div class ="row">
+               <div class ="col-4">
               <input
-                type="text"
+                type="search"
                 placeholder="Search for a City"
+                class =" form-control"
                 autocomplete="off"
                 autofocus="on"
                 id="search-text-input"
-              />
-              <input type="submit" value="search" id="searchbutton" />
+                />
+               </div>
+               <div class ="col-6">
+              <input
+                type="submit" 
+                value="search" 
+                id="searchbutton"
+                class="btn btn-primary" />
+               </div>
+            </div>
             </form>
+          <div class ="col-4">
+          <button
+            id="current-location-button">
+            My Location
+          </button>
           </div>
-        </div>
-      </nav>
+
+
+          <div class="col-8">
+       <h6 id="current-day"></h6>
+       </div>
       
         <h2 id="current-city"></h2>
         <h2 id="current-temp"></h2>
