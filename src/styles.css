@@ -10,5 +10,22 @@
 }
 
 #current-day {
-  margin: right 0px;
+  margin: right 10px;
+}
+
+.weather-forecast {
+  text-align: center;
+  font-size: 16px;
+}
+
+#outlook {
+  list-style: none;
+  text-align: center;
+}
+
+.weather-forecast-max {
+}
+
+.weather-forecast-min {
+  opacity: 75%;
 }
