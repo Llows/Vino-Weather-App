@@ -42,6 +42,11 @@ const defaultCity = async (event) => {
 
 defaultCity();
 
+function searchCity(city) {
+  let apiKey = "a19d0a7907ecf33ebe6bf26439eeef45";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+}
 function showPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
@@ -87,7 +92,6 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-
   celsiusTemperature = response.data.main.temp;
 }
 
@@ -111,9 +115,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 let celsiusTemperature = null;
-
-function searchCity(city) {
-  let apiKey = "a19d0a7907ecf33ebe6bf26439eeef45";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showTemperature);
-}

@@ -18,12 +18,9 @@
   font-size: 16px;
 }
 
-#outlook {
+#forecast-day {
   list-style: none;
   text-align: center;
-}
-
-.weather-forecast-max {
 }
 
 .weather-forecast-min {
