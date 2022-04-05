@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vino 🍇 Weather</title>
     <link
@@ -17,187 +17,90 @@
   <body>
     <div class="container">
       <p>
-        <a class="col-4" href="https://github.com/Llows/Vino-Weather-App"
-          >Open source</a
-        >
+        <a href="https://github.com/Llows/Vino-Weather-App">Open source</a>
         coded by Lucy Hallows
       </p>
 
-      <nav class="row navbar bg-light">
-        <div class="col-6 container-fluid" id="search-form">
-          <h6>city</h6>
-
-          <div class="col-6">
-            <form id="search-form">
-              <input
-                type="text"
-                placeholder="Search for a City"
-                autocomplete="off"
-                autofocus="on"
-                id="search-text-input"
-              />
-              <input type="submit" value="search" id="searchbutton" />
-            </form>
+      <form id="search-form" class="mb-3">
+        <div class="row">
+          <div class="col-4">
+            <input
+              type="search"
+              placeholder="Search for a City"
+              class="form-control"
+              autocomplete="off"
+              autofocus="on"
+              id="search-text-input"
+            />
           </div>
-
-          <div>
-            <button class="col-6" id="current-location-button">
-              Current Location
-            </button>
+          <div class="col-6">
+            <input
+              type="submit"
+              value="search"
+              id="searchbutton"
+              class="btn btn-primary"
+            />
           </div>
         </div>
-      </nav>
+      </form>
+      <div class="col-4">
+        <button id="current-location-button">My Location</button>
+      </div>
 
-      //
+      <div class="col-4">
+        <h6 id="current-day"></h6>
+      </div>
 
-      <div class="row current-weather">
-        <h2>
-          <div class="current-city">New York</div>
-          <div id="current-temp">17 °C | °F</div>
-        </h2>
-        <div class="col-4 current-weathertemp">
+      <h2 id="current-city"></h2>
+      <h2 id="current-temp"></h2>
+      <h3>
+        <span class="units">
+          <a href="#" id="celsius-link" class="active"> °C </a> |<a
+            href="#"
+            id="fahrenheit-link"
+          >
+            F°
+          </a></span
+        >
+      </h3>
+
+      <div class="col-12 CurrentWeather-Icon">
+        <img src="..." id="icon" alt="clear" />
+      </div>
+      <div class="col-10 CurrentWeather-Detail">
+        <span class="CurrentDate">
           <ul>
+            <li id="description"></li>
+            <li>Humidity: <span id="humidity"></span> %</li>
             <li>
-              <span class="CurrentHigh"> <strong> High: </strong> 6</span>
-              <br />
+              Wind: <span id="wind"> Km</span> <span id="direction"></span>
             </li>
+          </ul>
+        </span>
+      </div>
+    </div>
 
+    <div class="weather-forecast">
+      <div class="row">
+        <div class="col-2">
+          <ul id="outlook">
+            <li>Thursday</li>
             <li>
-              <span class="currentLow"> <strong>Low:</strong> -2</span>
+              <img
+                src="http://openweathermap.org/img/wn/50d@2x.png"
+                alt="..."
+                width="40"
+              />
+            </li>
+            <li>
+              <span class="weather-forecast-max"> 18° </span>
+              <span class="weather-forecast-min">12°</span>
             </li>
           </ul>
         </div>
-        <div class="col-4 CurrentWeather-Icon">
-          <br />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="75"
-            height="75"
-            fill="currentColor"
-            class="bi bi-cloud"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"
-            />
-          </svg>
-        </div>
-        <div class="col-10 CurrentWeather-Detail">
-          <span class="CurrentDate">
-            <ul>
-              <li>
-                <strong>Sunday Feb 6 2022</strong>
-              </li>
-              <li>Day: A mix of Sun and cloud</li>
-              <li>Night: Clear Skies</li>
-              <li>Wind: 20km SE</li>
-              <li>UV Index: Low</li>
-            </ul>
-          </span>
-        </div>
-      </div>
-
-      <h2>5 Day Outlook</h2>
-
-      <div class="row align-items-end outlook">
-        <div class="col">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="50"
-            height="50"
-            fill="currentColor"
-            class="bi bi-brightness-high"
-            viewBox="0 0 16 18"
-          >
-            <path
-              d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-            />
-          </svg>
-          <br />
-          Monday <br />7th Feb <br />
-          High: 7 <br />
-          Low : -1
-        </div>
-        <div class="col">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="50"
-            height="50"
-            fill="currentColor"
-            class="bi bi-brightness-high"
-            viewBox="0 0 16 18"
-          >
-            <path
-              d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-            />
-          </svg>
-          <br />
-          Tuesday <br />
-          8th Feb <br />
-          High: 3 <br />
-          Low : -4
-        </div>
-        <div class="col">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="50"
-            height="50"
-            fill="currentColor"
-            class="bi bi-brightness-high"
-            viewBox="0 0 16 18"
-          >
-            <path
-              d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-            />
-          </svg>
-          <br />
-          Wednesday<br />
-          9th Feb <br />
-          High: 5 <br />
-          Low : -6
-        </div>
-
-        <div class="col">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="50"
-            height="50"
-            fill="currentColor"
-            class="bi bi-brightness-high"
-            viewBox="0 0 16 18"
-          >
-            <path
-              d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-            />
-          </svg>
-          <br />
-          Thursday<br />
-          10th Feb <br />
-          High: 2 <br />
-          Low : -1
-        </div>
-
-        <div class="col">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="50"
-            height="50"
-            fill="currentColor"
-            class="bi bi-brightness-high"
-            viewBox="0 0 16 18"
-          >
-            <path
-              d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-            />
-          </svg>
-          <br />
-          Friday <br />
-          11th Feb <br />
-          High: 6 <br />
-          Low : 0
-        </div>
       </div>
     </div>
+
     <script type="text/javascript" src="src/index.js"></script>
   </body>
 </html>

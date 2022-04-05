@@ -1,76 +1,31 @@
-body {
-  font-family: "Nunito", sans-serif;
-  background: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
-}
 .container {
-  max-width: 600 px;
-}
-h2 {
-  background-color: #f8f9fa;
-  color: #304352;
-  border-radius: 10px;
-  padding: 15px;
-  margin-top: 15px;
-  width: 60%;
+  font-family: "Courier New", Courier, monospace;
+  max-width: 1200px;
+  box-sizing: none;
 }
 
-#search-text-input {
-  border-radius: 4px;
-  border: cadetblue;
-  margin: auto;
-}
-#search-form {
-  width: 60%;
-  box-sizing: border-box;
-}
-#searchbutton {
-  display: inline-block;
-  border-radius: 10px;
-  border: cadetblue;
-  margin: auto;
-  box-sizing: border-box;
-}
-.navbar {
-  border-radius: 10px;
-}
 #current-location-button {
-  display: block;
-  text-align: auto;
-  border-radius: 10px;
-  border: cadetblue;
+  border-radius: 3px;
+  float: right;
 }
-.degree {
-  font-size: medium;
-  align: margin-top;
+
+#current-day {
+  margin: right 10px;
 }
-.current-weather {
-  padding-top: 10px;
-  color: #304352;
-  border-radius: 10px;
-  padding: 15px;
-  margin-left: 1.5px;
-  width: 70%;
+
+.weather-forecast {
+  text-align: center;
+  font-size: 16px;
 }
-.current-weathertemp {
-  width: fit-content;
-  color: #304352;
+
+#outlook {
+  list-style: none;
+  text-align: center;
 }
-.CurrentWeather-Icon {
-  color: #304352;
-  padding: 20px;
+
+.weather-forecast-max {
 }
-.CurrentWeather-Detail {
-  color: #304352;
-  padding: 0px;
-  width: fit-content;
-  margin-top: 0px;
-}
-.outlook {
-  background-color: #f8f9fa;
-  color: #304352;
-  border-radius: 10px;
-  padding: 15px;
-  margin-left: 1.5px;
-  margin-top: 15px;
-  width: 60%;
+
+.weather-forecast-min {
+  opacity: 75%;
 }
