@@ -94,11 +94,14 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
   celsiusTemperature = response.data.main.temp;
 
-  getForecast(response.data.coords);
+  getForecast(response.data.coord);
 }
 
 function getForecast(coordinates) {
   console.log(coordinates);
+  let apiKey = "a19d0a7907ecf33ebe6bf26439eeef45";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
 }
 
 function showFharenheitTemperature(event) {
@@ -121,5 +124,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 let celsiusTemperature = null;
-
-displayForecast();
