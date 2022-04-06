@@ -43,11 +43,8 @@
           </div>
         </div>
       </form>
-      <div class="col-4">
-        <button id="current-location-button">My Location</button>
-      </div>
 
-      <div class="col-4">
+      <div class="col-6">
         <h6 id="current-day"></h6>
       </div>
 
@@ -55,47 +52,42 @@
       <h2 id="current-temp"></h2>
       <h3>
         <span class="units">
-          <a href="#" id="celsius-link" class="active"> °C </a> |<a
+          <a href="#" id="celsius-link" class="active"> °C</a>|<a
             href="#"
             id="fahrenheit-link"
-          >
-            F°
+            >F°
           </a></span
         >
       </h3>
-
-      <div class="col-12 CurrentWeather-Icon">
-        <img src="..." id="icon" alt="clear" />
+      <div class="col-6">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          id="current-location-button"
+        >
+          My Location
+        </button>
       </div>
-      <div class="col-10 CurrentWeather-Detail">
-        <span class="CurrentDate">
-          <ul>
-            <li id="description"></li>
-            <li>Humidity: <span id="humidity"></span> %</li>
-            <li>
-              Wind: <span id="wind"> Km</span> <span id="direction"></span>
-            </li>
-          </ul>
-        </span>
-      </div>
-    </div>
 
-    <div class="weather-forecast" id="outlook">
-      <div class="row">
-        <div class="col-1">
-          <div class="forecast-day">Fri</div>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt=""
-            width="42"
-          />
-          <div class="weather-forecast-temp">
-            <span class="weather-forecast-temp-max"> 17 </span>
-            <span class="weather-forecast-temp-min"> 12 </span>
-          </div>
+      <div class="today-weather">
+        <div class="col-10 CurrentWeather-Icon">
+          <img src="..." id="icon" alt="clear" />
+        </div>
+        <div class="col-10 CurrentWeather-Detail">
+          <span class="CurrentDate">
+            <ul id="overview">
+              <li id="description"></li>
+              <li>Humidity: <span id="humidity"></span> %</li>
+              <li>
+                Wind: <span id="wind"> Km</span> <span id="direction"></span>
+              </li>
+            </ul>
+          </span>
         </div>
       </div>
     </div>
+
+    <div class="weather-forecast" id="outlook"></div>
 
     <script type="text/javascript" src="src/index.js"></script>
   </body>

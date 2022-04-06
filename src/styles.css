@@ -1,22 +1,33 @@
 .container {
   font-family: "Courier New", Courier, monospace;
   max-width: 1200px;
-  box-sizing: none;
 }
 
 #current-location-button {
   border-radius: 3px;
-  float: right;
+  display: inline;
+  margin-bottom: 5px;
 }
 
-#current-day {
-  margin: right 10px;
+.today-weather {
+  display: grid;
+}
+#current-temp {
+  text-align: justify;
+  margin-bottom: 1px;
+}
+
+#current-city {
+  display: inline-block;
 }
 
 .weather-forecast {
   text-align: center;
   font-size: 16px;
   margin-left: 20px;
+}
+#overview {
+  list-style-type: none;
 }
 a:link {
   text-decoration: none;
@@ -28,6 +39,10 @@ a:link {
 
 .forecast-day {
   color: navy;
+}
+
+.weather-forecast {
+  float: inline-start;
 }
 
 .weather-forecast-temp {
