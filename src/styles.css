@@ -16,13 +16,23 @@
 .weather-forecast {
   text-align: center;
   font-size: 16px;
+  margin-left: 20px;
+}
+a:link {
+  text-decoration: none;
+}
+.units {
+  color: navy;
+  font-size: 16px;
 }
 
-#forecast-day {
-  list-style: none;
-  text-align: center;
+.forecast-day {
+  color: navy;
 }
 
-.weather-forecast-min {
+.weather-forecast-temp {
+  font-size: 13px;
+}
+.weather-forecast-temp-min {
   opacity: 75%;
 }
