@@ -42,7 +42,9 @@ a:link {
 }
 
 .weather-forecast {
-  float: inline-start;
+  box-sizing: content-box;
+  text-align: center;
+  margin-left: 0px;
 }
 
 .weather-forecast-temp {
