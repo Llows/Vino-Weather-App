@@ -73,61 +73,6 @@ function search(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
-
-  //have to work on code for ROW's below not registering.  Video - Forecast / JS Template. 
-  
-
-  let forecastHTML = <div class="row">;
-  forecastHTML =
-    forecastHTML +
-    `
-        <div class="col-2">
-          <ul id="forecast-day">
-            <li>Thursday</li>
-            <li>
-              <img
-                src="http://openweathermap.org/img/wn/50d@2x.png"
-                alt="..."
-                width="40"
-              />
-            </li>
-            <li>
-              <span class="weather-forecast-max"> 18° </span>
-              <span class="weather-forecast-min">12°</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-`;
-  forecastHTML =
-    forecastHTML +
-    `
-        <div class="col-2">
-          <ul id="forecast-day">
-            <li>Thursday</li>
-            <li>
-              <img
-                src="http://openweathermap.org/img/wn/50d@2x.png"
-                alt="..."
-                width="40"
-              />
-            </li>
-            <li>
-              <span class="weather-forecast-max"> 18° </span>
-              <span class="weather-forecast-min">12°</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-`;
-  forecastHTML = forecastHTML + "</div>";
-  forecastElement.innerHTML = forecastHTML;
-}
-
 function showTemperature(response) {
   let temperatureElement = document.querySelector("#current-temp");
   let temperature = Math.round(response.data.main.temp);
@@ -148,6 +93,12 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
   celsiusTemperature = response.data.main.temp;
+
+  getForecast(response.data.coords);
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
 }
 
 function showFharenheitTemperature(event) {
