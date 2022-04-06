@@ -43,7 +43,7 @@ const defaultCity = async (event) => {
 defaultCity();
 
 function formatDay(timestamp) {
-  let date = new Date(timestame * 1000);
+  let date = new Date(timestamp * 1000);
   let day = date.getDay();
 
   let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
