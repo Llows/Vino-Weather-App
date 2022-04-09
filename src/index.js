@@ -132,6 +132,7 @@ function showTemperature(response) {
   let temperatureElement = document.querySelector("#current-temp");
   let temperature = Math.round(response.data.main.temp);
   let descriptionElement = document.querySelector("#description");
+
   temperatureElement.innerHTML = `${temperature}`;
   let currentCity = document.querySelector("#current-city");
   currentCity.innerHTML = response.data.name;

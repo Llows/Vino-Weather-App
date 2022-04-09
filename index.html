@@ -42,49 +42,52 @@
           </div>
         </div>
       </form>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h6 id="current-day"></h6>
+          </div>
 
-      <div class="col-6">
-        <h6 id="current-day"></h6>
-      </div>
+          <h2 id="current-city"></h2>
+          <h2 id="current-temp"></h2>
+          <h3>
+            <span class="units">
+              <a href="#" id="celsius-link" class="active"> °C</a>|<a
+                href="#"
+                id="fahrenheit-link"
+                >F°
+              </a></span
+            >
+          </h3>
+          <div class="col">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              id="current-location-button"
+            >
+              My Location
+            </button>
+          </div>
 
-      <h2 id="current-city"></h2>
-      <h2 id="current-temp"></h2>
-      <h3>
-        <span class="units">
-          <a href="#" id="celsius-link" class="active"> °C</a>|<a
-            href="#"
-            id="fahrenheit-link"
-            >F°
-          </a></span
-        >
-      </h3>
-      <div class="col-6">
-        <button
-          type="button"
-          class="btn btn-secondary"
-          id="current-location-button"
-        >
-          My Location
-        </button>
-      </div>
-
-      <div class="today-weather">
-        <div class="col-10 CurrentWeather-Icon">
-          <img src="..." id="icon" alt="clear" />
+          <div class="col today-weather">
+            <div class="CurrentWeather-Icon">
+              <img src="..." id="icon" alt="clear" />
+            </div>
+            <div class="col CurrentWeather-Detail">
+              <span class="CurrentDate">
+                <ul id="overview">
+                  <li id="description"></li>
+                  <li>Humidity: <span id="humidity"></span> %</li>
+                  <li>
+                    Wind: <span id="wind"> Km</span>
+                    <span id="direction"></span>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
         </div>
-        <div class="col-10 CurrentWeather-Detail">
-          <span class="CurrentDate">
-            <ul id="overview">
-              <li id="description"></li>
-              <li>Humidity: <span id="humidity"></span> %</li>
-              <li>
-                Wind: <span id="wind"> Km</span> <span id="direction"></span>
-              </li>
-            </ul>
-          </span>
-        </div>
       </div>
-
       <div class="weather-forecast" id="outlook"></div>
     </div>
 
